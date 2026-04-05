@@ -1,48 +1,52 @@
 # 🔁 Java Loop Control & Data Integrity: Domínio de Repetições
 
-Este projeto reúne uma série de **10 laboratórios práticos** desenvolvidos em Java, focados na implementação de estruturas de repetição e, principalmente, na construção de algoritmos resilientes através da **validação rigorosa de dados (Data Sanitization)**.
+Este projeto reúne uma série de **10 laboratórios práticos** desenvolvidos em Java, focados na implementação de estruturas de repetição e na construção de algoritmos resilientes através da **validação rigorosa de dados (Data Sanitization)** e manipulação de fluxos dinâmicos.
 
 ---
 
 ## 🔍 O que foi explorado?
 
-O objetivo principal desta lista foi transicionar da lógica sequencial simples para fluxos de controle dinâmicos, onde o programa interage com o usuário até que critérios de integridade sejam atendidos.
+O objetivo deste repositório foi consolidar o uso de laços (`while`, `for`) e condicionais para criar softwares que não apenas calculam, mas que garantem a integridade da informação processada.
 
-### 1. Lógica de Validação Persistente
-Em exercícios como o de **Notas (`Exercicio_01`)** e **Formulário (`Exercicio_03`)**, aplicamos o padrão de "Loop Infinito Controlado":
-* **Padrão:** O programa entra em um `while(true)` e só libera o fluxo através do comando `break` quando todas as regras de negócio (como idade entre 0-150 ou nome > 3 caracteres) são satisfeitas.
+### 1. Validação e Persistência (Ex. 01 ao 03)
+Implementação do padrão de "Loop Infinito Controlado". O programa utiliza `while(true)` para desafiar o usuário a inserir dados válidos, utilizando `break` apenas quando critérios como limites de idade, tamanho de strings e regras de login são satisfeitos.
 
-### 2. Simulação de Crescimento Dinâmico
-Nos exercícios de **População (`Exercicio_04` e `05`)**, exploramos cálculos iterativos para prever eventos futuros baseados em taxas percentuais, evoluindo de um cenário estático para um simulador onde o usuário define todas as variáveis de entrada.
+### 2. Simulação e Fluxo Numérico (Ex. 04 ao 06)
+Transição da lógica estática para a dinâmica. Exploramos o cálculo de tempo para ultrapassagem populacional (Progressão Geométrica) e a formatação de saída de dados no console, alternando entre buffers verticais (`println`) e horizontais (`print`).
 
-### 3. Manipulação de Intervalos e Coleções
-* **Ordenação Inteligente:** No `Exercicio_10`, utilizamos os métodos `Math.min()` e `Math.max()` para garantir que o intervalo numérico fosse impresso corretamente, independentemente da ordem em que o usuário inseriu os valores.
-* **Processamento de Arrays:** Implementamos algoritmos de busca (Maior valor) e acumuladores (Soma e Média) utilizando vetores de tamanho fixo.
+### 3. Processamento de Coleções e Matemática (Ex. 07 ao 10)
+Uso de arrays para armazenamento temporário e análise de dados. Implementamos algoritmos de busca de maior valor, cálculo de médias aritméticas, filtros lógicos (operador de módulo `%`) e o uso da classe `Math` para garantir que intervalos numéricos funcionem independentemente da ordem de entrada.
 
 ---
 
-## 💻 Destaques do Portfólio
+## 💻 Detalhamento da Lista Completa
 
-| Exercício | Foco Técnico | Diferencial Aplicado |
+| Exercício | Objetivo Técnico | Conceito Aplicado |
 | :--- | :--- | :--- |
-| **Login Seguro** | `Exercicio_02` | Bloqueio de credenciais idênticas (User == Pass). |
-| **Validação IHC** | `Exercicio_03` | Checagem múltipla de tipos (String, Int, Double, Char). |
-| **Simulador Pop** | `Exercicio_05` | Validação de taxas negativas e cálculo de anos. |
-| **Filtro Lógico** | `Exercicio_09` | Uso do operador de módulo `%` para extração de ímpares. |
-| **Intervalo Seguro** | `Exercicio_10` | Prevenção de erro de limite superior < inferior via `Math`. |
+| **01** | Validar notas em intervalo estrito (0-10). | `while` + `if/else` |
+| **02** | Bloqueio de credenciais (Senha != Usuário). | `String.equals()` |
+| **03** | Validação complexa de formulário IHC. | `length()`, `trim()`, `charAt()` |
+| **04** | Cálculo de crescimento populacional fixo. | Acumuladores e Taxas |
+| **05** | Simulador populacional com inputs do usuário. | Interatividade Dinâmica |
+| **06** | Manipulação de saída vertical (1 a 20). | `for` loop + `println` |
+| **06.1** | Manipulação de saída horizontal (1 a 20). | `for` loop + `print` |
+| **07** | Identificação de maior valor em conjunto. | Arrays e Iteração |
+| **08** | Soma acumulada e média de 5 números. | Operações Aritméticas |
+| **09** | Filtro de números ímpares entre 1 e 50. | Operador de Resto `%` |
+| **10** | Gerador de intervalo numérico seguro. | `Math.min` e `Math.max` |
 
 ---
 
 ## 🛠️ Tecnologias e Ferramentas
 * **Linguagem:** Java (JDK 17+).
 * **Entrada de Dados:** Classe `java.util.Scanner`.
-* **Biblioteca Matemática:** `java.lang.Math` para lógica de comparação e potências.
-* **Versionamento:** Git/GitHub para gestão de repositório.
+* **Lógica Matemática:** Classe `java.lang.Math` para prevenção de erros de limite.
+* **Paradigma:** Programação Estruturada e Práticas de IHC (Interação Humano-Computador).
 
 ---
 
 ## 🚀 Como Executar
-Cada exercício é uma classe independente com seu próprio método `main`. Para testar:
+Cada exercício possui uma classe independente. Para testar o comportamento de validação:
 1. Compile o arquivo: `javac Exercicio_10.java`
 2. Execute: `java Exercicio_10`
 
